@@ -1,0 +1,45 @@
+{
+  "name": "node-redis-socketio-chat",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@types/redis": "^2.8.28",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.0.0",
+    "compression": "^1.7.4",
+    "connect-redis": "^5.0.0",
+    "crypto-js": "^4.1.1",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.1",
+    "express-fileupload": "^1.3.1",
+    "express-session": "^1.17.1",
+    "express-winston": "^4.2.0",
+    "ip": "^1.1.5",
+    "module-alias": "^2.2.2",
+    "moment": "^2.29.1",
+    "mongodb": "^4.4.0",
+    "nanoid": "^3.3.2",
+    "node-random-name": "^1.0.1",
+    "nodemailer": "^6.7.2",
+    "redis": "^3.0.2",
+    "socket.io": "^3.0.4",
+    "winston": "^3.6.0"
+  },
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js"
+  },
+  "_moduleAliases": {
+    "@src": "./src"
+  },
+  "devDependencies": {
+    "@types/socket.io": "^2.1.12",
+    "eslint": "^8.10.0",
+    "nodemon": "^2.0.6"
+  }
+}
