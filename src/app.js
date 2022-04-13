@@ -14,9 +14,9 @@ const { SERVER_ID } = require("./config");
 const router = require('./routes');
 const socketHandle = require('./socket')
 
-const app = express();
-const server = require("http").createServer(app);
-const io = require("socket.io")(server);
+const app = express(),
+    server = require("http").createServer(app),
+    io = require("socket.io")(server);
 
 const sessionMiddleware = session({
   store: new RedisStore({ client: redisClient }),
@@ -57,9 +57,5 @@ app.use("/", express.static(path.dirname(__dirname) + "/client/build"));
 
 app.use(sessionMiddleware);
 app.use('/api', router);
-
-
-
-
 
 module.exports = server;

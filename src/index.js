@@ -27,10 +27,12 @@ process.on('unhandledRejection', unexpectedErrorHandler)
   await initData()
 
   if (process.env.PORT) {
-    server.listen(+PORT, "0.0.0.0", () =>
-      console.log(`Listening on ${PORT}...`)
+    server.listen(+PORT, () =>
+      console.log(`Listening on http://localhost:${PORT}...`)
     );
   } else {
-    server.listen(+PORT, () => console.log(`Listening on ${PORT}...`));
+    server.listen(+PORT, () => 
+      console.log(`Listening on http://localhost:${PORT}...`)
+    );
   }
 })()
